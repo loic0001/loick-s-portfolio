@@ -221,23 +221,30 @@ body {
 }
 
 .stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 36px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
   margin-bottom: 26px;
+  max-width: 760px;
 }
 
 .stats h3 {
   margin: 0;
-  font-size: clamp(2.3rem, 4vw, 3.2rem);
+  font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1;
+  letter-spacing: -0.02em;
 }
 
 .stats p {
   margin: 8px 0 0;
-  color: #b7bbca;
-  font-size: 0.86rem;
-  letter-spacing: 0.04em;
+  color: #d6d9e4;
+  font-size: 0.74rem;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+.stats article {
+  text-align: center;
 }
 
 .cta-row {
@@ -383,15 +390,21 @@ body {
   }
 
   .page {
-    padding: 18px 12px;
+    padding: 12px 8px;
     overflow-x: clip;
+  }
+
+  .hero-grid,
+  .hero-content {
+    min-width: 0;
+    width: 100%;
   }
 
   .top-nav {
     width: 100%;
     max-width: 100%;
     gap: 4px;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
     padding: 4px;
     border-radius: 12px;
   }
@@ -409,33 +422,40 @@ body {
   }
 
   .hero-content h1 {
-    font-size: 1.3rem;
+    font-size: 1.12rem;
     line-height: 1.25;
   }
 
   .lead {
-    font-size: 0.9rem;
+    font-size: 0.84rem;
     line-height: 1.45;
+    margin: 10px 0 16px;
   }
 
   .stats {
-    grid-template-columns: 1fr;
-    gap: 14px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 14px;
   }
 
   .stats h3 {
-    font-size: 1.9rem;
+    font-size: 1.65rem;
+  }
+
+  .stats p {
+    font-size: 0.74rem;
   }
 
   .social-row {
     flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 18px;
+    gap: 10px;
+    margin-bottom: 14px;
   }
 
   .cta-row {
-    gap: 14px;
+    gap: 10px;
     flex-wrap: wrap;
+    margin-bottom: 18px;
   }
 
   .btn,
@@ -454,7 +474,36 @@ body {
   }
 
   .trusted-marquee {
-    margin-left: 0;
+    display: none;
+  }
+
+  .trusted p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .profile-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px;
+  }
+
+  .profile-image {
+    height: 190px;
+  }
+
+  .profile-name {
+    font-size: 1.85rem;
+    margin: 12px 0 6px;
+  }
+
+  .profile-role,
+  .profile-location {
+    font-size: 0.88rem;
+  }
+
+  .profile-btn {
+    height: 40px;
   }
 }
 
